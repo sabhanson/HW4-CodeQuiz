@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
-    <nav><a href="highscores.html">View Highscores</a></nav>
-    <header>
-        <h1>Coding Quiz Challenge</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit consectetur vel quas illum explicabo asperiores quae earum. Error nihil neque amet esse deserunt quam, veniam, molestiae, voluptatibus nulla aspernatur accusamus.</p>
-        <button>Start Quiz</button>
-    </header>
+    <nav class="nav">
+        <a class= "score" href="highscores.html">View Highscores</a>
+        <p class="timer">Time: 60 sec</p>
+    </nav>
+
+    <section class="mainContainer">
+        <h1 class="title">Coding Quiz Challenge</h1>
+        <p class="paragraph">Try your luck on this super difficult quiz. You'll be given 60 seconds to answer 5 questions. Keep in mind that wrong
+         answers will penalize your time remaining by 10 seconds.</p>
+    </section>
+
+    <div class="button">
+        <button class="mainButton">Start Quiz</button>
+    </div>
     
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
