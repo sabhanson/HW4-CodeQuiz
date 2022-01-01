@@ -1,3 +1,8 @@
+/* TODO: organize css styling, refactor
+   TODO: apply same flexbox styling to each container
+      */
+
+
 body {
     background-color:white;
     font-family: monospace;
@@ -42,12 +47,13 @@ body {
 .paragraph {
     text-align: center;
     font-size: 20px;
-    color: black;
+    color: white;
     margin: 4px 15%;
     max-width: 70%;
     padding: 10px;
     border: 5px dotted wheat;
     border-radius: 10px;
+    background-color: sandybrown;
 }
 
 
@@ -59,7 +65,7 @@ body {
     margin-top: 10px;
 }
 
-.mainButton {
+.buttonStyle {
     font-size: 16px;
     text-decoration: none;
     color: white;
@@ -83,6 +89,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.goBack {
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    background-color: orange;
+    font-family: monospace;
+    margin-left: 3px;
+}
+
+.goBack a {
+    text-decoration: none;
+    color: white;
 }
 
 .clearHS {

@@ -13,18 +13,42 @@
 <body>
     <nav class="nav">
         <a class= "score" href="highscores.html">View Highscores</a>
-        <p class="timer">Time: 60 sec</p>
+        <p id ="timer" class="timer">Time: 60 sec</p>
     </nav>
 
-    <section class="mainContainer">
-        <h1 class="title">Coding Quiz Challenge</h1>
+    <section id="main-container" class="mainContainer">
+        <h1 id="title1" class="title">Coding Quiz Challenge</h1>
         <p class="paragraph">Try your luck on this super difficult quiz. You'll be given 60 seconds to answer 5 questions. Keep in mind that wrong
          answers will penalize your time remaining by 10 seconds.</p>
+         <div id="mainButton" class="button">
+            <button class="buttonStyle">Start Quiz</button>
+        </div>
+    </section>
+    <!-- moved start button to inside the main container -->
+
+
+    <section id= "questionContainer" class = "questionContainer" style="display: none;">
+        <h1 class ="title" id = "question">Question Placeholder</h1>
+        <div id = "buttonContainer">
+            <button class ="buttonStyle" id = "button0">button placeholder</button>
+            <button class ="buttonStyle" id = "button1">button placeholder</button>
+            <button class ="buttonStyle" id = "button2">button placeholder</button>
+            <button class ="buttonStyle" id = "button3">button placeholder</button>
+        </div>
+        <div id = "answer-check" style="display: none;">
+            <p id = "check"></p>
+        </div>
     </section>
 
-    <div class="button">
-        <button class="mainButton">Start Quiz</button>
-    </div>
+    <section id = "endGame" style="display: none;">
+        <h1 class = "title">All Done!</h1>
+        <p id = "finalScore"></p>
+        <form action="#">
+            <label for="initials">Enter Initials: </label>
+            <input type="text" name="initials" id="initials" value="">
+            <input type="submit" value="Submit">
+        </form>
+    </section>
     
     <script src="./assets/script.js"></script>
 </body>
