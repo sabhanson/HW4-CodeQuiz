@@ -17,28 +17,48 @@ var finalScore = document.getElementById("finalScore");
 
 const questions = [
     {
-        question: "This is question 1",
-        choices: ["1. a", "2. b", "3. c", "4. d"],
-        answer: "1. a",
+        question: "How do you add a comment in JavaScript?",
+        choices: [
+            "1. // This is a JavaScript comment",
+            "2. <!-- This is a JavaScript comment -->",
+            "3. /* This is a JavaScript comment */",
+            "4. !-- This is a JavaScript comment --!"],
+        answer: "1. // This is a JavaScript comment",
     },
     {
         question: "This is question 2",
-        choices: ["1", "2", "3", "4"],
+        choices: [
+            "1",
+            "2",
+            "3",
+            "4"],
         answer: "2",
     },
     {
         question: "This is question 3",
-        choices: ["1", "2", "3", "4"],
+        choices: [
+            "1",
+            "2",
+            "3",
+            "4"],
         answer: "3",
     },
     {
         question: "This is question 4",
-        choices: ["1", "2", "3", "4"],
+        choices: [
+            "1",
+            "2",
+            "3",
+            "4"],
         answer: "4",
     },
     {
         question: "This is question 5",
-        choices: ["1", "2", "3", "4"],
+        choices: [
+            "1",
+            "2",
+            "3", 
+            "4"],
         answer: "1",
     },
 ]
