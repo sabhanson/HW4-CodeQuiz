@@ -1,14 +1,10 @@
-/* TODO: organize css styling, refactor
-   TODO: apply same flexbox styling to each container
-      */
-
-
-      body {
+/* applied to the whole site,  */
+body {
         background-color:white;
         font-family: monospace;
-    }
-    
-    .nav {
+}
+/* applied to the nav bar, shown on homescreen*/    
+.nav {
         display: flex;
         flex-flow: row;
         color: black;
@@ -18,15 +14,14 @@
         flex-basis: auto;
         margin-bottom: 100px;
     }
-    
+    /* applied only to the view highscores button     */
     .score {
         text-decoration: none;
         color: black;
         text-decoration: underline;
     }
-    
-    
-    .mainContainer {
+    /* applied to the main container on the homescreen, flexbox that contains the smaller elements     */
+    .codeQuizCon, .gameEnd, .highScoresCon {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,8 +29,23 @@
         margin: 0% 20%;
         max-width: 60%;
     }
-    
-    .title {
+    /* applies to container on highscores page that holds h1 and ul elements     */
+    .highScoresCon {
+            margin-top: 136px;
+            margin-left: 20%;
+            margin-right: 20%;
+    }
+/* applied to the question box that appears once you start quiz, flexboxes that contain smaller elements     */
+.questionBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0% 20%;
+        max-width: 60%;
+}
+/* applied to the 'coding quiz challenge' and each specific quiz question, and the highscores page title     */
+.redBox, .scoresTitle {
         font-size: 32px;
         min-width: 100%;
         text-align: center;
@@ -44,10 +54,11 @@
         padding: 10px;
         border: 5px double orangered;
         border-radius: 10px;
-    }
-    
-    .paragraph {
+}
+/* applied to the homescreen section that says 'try your luck...' */
+.paragraph, .finalPar {
         text-align: center;
+        font-family: monospace;
         font-size: 20px;
         color: white;
         margin-top: 10px;
@@ -56,68 +67,88 @@
         border: 5px dotted wheat;
         border-radius: 10px;
         background-color: sandybrown;
-    }
-    
-    
-    .button {
+}   
+    /* applied to the 'start quiz' flexbox and highscores flexbox that holds the button(s)... could probably move button into maincontainer flexbox??,  */
+.button {
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
         margin-top: 10px;
-    }
-    
-    .buttonStyle {
+}
+/* applies specific style to button itself */
+.buttonStyle {
         font-size: 16px;
         text-decoration: none;
         color: white;
         border-radius: 10px;
         background-color: orange;
         font-family: monospace;
-    }
-    
-    
-    .mainButton:hover {
+}
+
+.submitBtn {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    background-color: orange;
+    font-family: monospace;
+}
+/* hover effect on all of the buttons */  
+.buttonStyle:hover, .submitButt:hover {
         opacity: 70%;
-    }
-    
-    .HS {
-        margin-top: 136px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .goBack {
-        font-size: 16px;
-        color: white;
-        border-radius: 10px;
-        background-color: orange;
-        font-family: monospace;
-        margin-left: 3px;
-    }
-/*     
-    /* .buttonStyle a {
+}
+/* applies specifically to the 'go back' button since it has an anchor link and special things will apply      */
+.buttonStyle a {
         text-decoration: none;
         color: white;
-    } */ */
-    
-    .buttonContainer {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    
-    }
-    
-    .test {
-        text-align: center;
+} 
+
+.questionButton {
+        text-align: start;
         font-size: 20px;
         color: white;
-        margin: 4px 15%;
-        max-width: 70%;
-        padding: 10px;
-        border: 5px dotted wheat;
-        border-radius: 10px;
+        min-width: 100%;
+        font-family: monospace;
+        border: transparent;
         background-color: sandybrown;
-    }
+}
+.questionButton:hover {
+    color: wheat;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-self: center;
+}
+
+#finalScore {
+    font-size: 16px;
+    margin-top: 4px;
+    padding: 7px;
+    width: 100%;
+    text-align: center;
+}
+
+#finalPar {
+    text-align: center;
+    font-size: 16px;;
+}
+
+.answerStatusBox {
+    text-align: center;
+    font-family: monospace;
+    color: black;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 5px double sandybrown;
+    border-radius: 10px;
+}
+    
+.answerStatus {
+    font-size: 14px;
+    text-align: center;
+}

@@ -1,6 +1,75 @@
-var startButton = document.getElementById("mainButton");
+//when start quiz button is clicked, first question and answer page loads
+    //ADD EVENT LISTENER ON START BUTTON
+        //hide main-container id. WITHIN EVENT LISTENER, CHANGE CLASS OF MAIN-CONTAINER TO DISPLAY NONE
+        //show questioncontainer id. WITHIN EVENT LISTENER, CHANGE CLASS OF QUESTION CONTAINER TO DISPLAY 
+    //start timer
+    //populate question in title box
+        //show questioncontainer id, NEED RANDOM ARRAY THAT STORES QUESTION/ANSWER COMBOS
+    //populate answer in answer buttons
+        //show questioncontainer id, NEED RANDOM ARRAY THAT STORES QUESTION/ANSWER COMBOS
+
+//when question is answered correctly, alert pops up "correct"
+    //RANDOM ARRAY STORES CORRECT ANSWER
+    //moves on to next question
+        //iteration loop to cycle through questions ++ until all have been asked
+        //i = 0, i < array.length, i++
+    //time is not penalized
+        //i think this will happen by default.
+
+//when question is answered incorrectly, alert pops up "wrong"
+    //RANDOM ARRAY KNOWS CORRECT/INCORRECT CHOICES
+    //moves on to next question
+        //iteration loop
+    //time is penalized by 10 seconds
+        //timer function knows if wrong button is clicked, -10 sec from time left
+
+
+//timer
+    //starts at 60 seconds
+        //counts down 1 second in real time
+    //starts when 'start quiz' button is pressed
+    //BUG - final score is showing as 10 seconds when the timer is displaying 20 seconds if the last question is answered incorrectly. it's like the final page is loading too quickly for the timer to subtract anything.
+    //quiz ends if timer runs to 0 before all questions are answered
+
+
+
+//ARRAY OF OBJECTS
+    //QUESTIONS
+    //ANSWERS
+    //CORRECT ANSWER === USER SELECTION
+
+//all done page
+    //change display to visible for this class
+    //timer still shown in top right
+    //highscores page in top left
+    //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const startBtn = document.querySelector('#startBtn');
 var timeLeft = 60;
-var mainContainer = document.getElementById("main-container");
+const mainPage = document.querySelector('#codeQuiz')
 var answerContainer = document.getElementById("buttonContainer");
 var questionContainer = document.getElementById("questionContainer");
 var questionTitle = document.getElementById("question");
@@ -9,10 +78,10 @@ var choice1 = document.getElementById("button1");
 var choice2 = document.getElementById("button2");
 var choice3 = document.getElementById("button3");
 var questionArray = 0;
-var checkAns = document.getElementById("answer-check");
+var checkAns = document.getElementById("rightWrong");
 var check = document.getElementById("check");
 var timeInterval;
-var game = document.getElementById("endGame");
+var game = document.getElementById("allDone");
 var finalScore = document.getElementById("finalScore");
 
 const questions = [
@@ -26,46 +95,46 @@ const questions = [
         answer: "1. // This is a JavaScript comment",
     },
     {
-        question: "This is question 2",
+        question: "What does the property 'NaN' stand for?",
         choices: [
-            "1",
-            "2",
-            "3",
-            "4"],
-        answer: "2",
+            "1. Never a Number",
+            "2. Name and Number",
+            "3. Not a Number",
+            "4. Number all Numerals"],
+        answer: "3. Not a Number",
     },
     {
-        question: "This is question 3",
+        question: "What is the correct way to reference the class of ''hero'' in CSS?",
         choices: [
-            "1",
-            "2",
-            "3",
-            "4"],
-        answer: "3",
+            "1. #hero",
+            "2. .hero",
+            "3. *hero",
+            "4. $hero"],
+        answer: "2. .hero",
     },
     {
-        question: "This is question 4",
+        question: "What is the best background color (according to Joe)?",
         choices: [
-            "1",
-            "2",
-            "3",
-            "4"],
-        answer: "4",
+            "1. chartruese",
+            "2. seagreen",
+            "3. cornflowerblue",
+            "4. salmon"],
+        answer: "4. salmon",
     },
     {
-        question: "This is question 5",
+        question: "If we are comparing and need either expression 1 OR expression 2 to be true, what logical operator would we use?",
         choices: [
-            "1",
-            "2",
-            "3", 
-            "4"],
-        answer: "1",
+            "1. expression 1 || expression 2",
+            "2. expression 1 && expression 2",
+            "3. expression 1 != expression 2",
+            "4. expression 1 == expression 2"],
+        answer: "1. expression 1 || expression 2",
     },
 ]
 
-startButton.addEventListener("click", function () {
+startBtn.addEventListener("click", function () {
     var timerEl = document.getElementById("timer");
-    mainContainer.style.display = "none";
+    mainPage.style.display = "none";
     questionContainer.style.display = "block";
 
   
@@ -76,7 +145,7 @@ startButton.addEventListener("click", function () {
         timeLeft -= 1;
         timerEl.textContent = "Time: " + timeLeft + " sec";
   
-        if (timeleft <= 0) {
+        if (timeleft <= 0 || timeLeft === 0) {
           clearInterval(timeInterval);
         }
       }
@@ -102,9 +171,9 @@ function checkAnswer (answer) {
 
     if (
         questions[questionArray].answer === questions[questionArray].choices[answer])
-    { check.textContent = "correct";
+    { check.textContent = "right!";
     } else {
-      check.textContent = "wrong";
+      check.textContent = "wrong!";
       timeLeft -= 10;
     }   
     
@@ -139,6 +208,6 @@ choice3.addEventListener("click", option3);
 function gameEnd () {
     questionContainer.style.display = "none";
     game.style.display = "block";
-    finalScore.textContent = "Your final score is " + timeLeft + "!";
+    finalScore.textContent = "Your final score is " + timeLeft + ".";
     clearInterval(timeInterval);
 }

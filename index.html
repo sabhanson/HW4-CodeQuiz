@@ -4,49 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz Challenge</title>
+    <title>Coding Quiz</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./assets/reset.css">
-    <link rel="stylesheet" href="./assets/test.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
+    <!-- nav bar, view highscores link, timer placeholder -->
     <nav class="nav">
         <a class= "score" href="highscores.html">View Highscores</a>
         <p id ="timer" class="timer">Time: 60 sec</p>
     </nav>
-
-    <section id="main-container" class="mainContainer">
-        <h1 id="title1" class="title">Coding Quiz Challenge</h1>
+    <!-- coding quiz main page, 'coding quiz' 'take this quiz paragraph' 'start quiz button' -->
+    <section id="codeQuiz" class="codeQuizCon">
+        <h1 class="redBox">Coding Quiz</h1>
         <p class="paragraph">Try your luck on this super-difficult quiz. You'll be given 60 seconds to answer 5 questions. Keep in mind, wrong answers will penalize your time remaining by 10 seconds.</p>
-         <div id="mainButton" class="button">
+        <div id="startBtn" class="button">
             <button class="buttonStyle">Start Quiz</button>
         </div>
     </section>
-    <!-- moved start button to inside the main container -->
-
-
-    <section id= "questionContainer" class = "questionContainer" style="display: none;">
-        <h1 class ="title" id = "question">Question Placeholder</h1>
-        <div id = "buttonContainer">
-            <button class ="test buttonStyle" id = "button0">button placeholder</button>
-            <button class ="test buttonStyle" id = "button1">button placeholder</button>
-            <button class ="test buttonStyle" id = "button2">button placeholder</button>
-            <button class ="test buttonStyle" id = "button3">button placeholder</button>
+    <!-- container that holds possible questions and answer combos, answerStatus shows up here too -->
+    <section id="questionContainer" class="questionBox" style="display: none;">
+        <h1 id="question" class="redBox">Question Placeholder</h1>
+        <div class="paragraph glow">
+            <button class ="questionButton" id = "button0">button placeholder</button>
         </div>
-        <div id = "answer-check" style="display: none;">
-            <p id = "check"></p>
+        <div class="paragraph">
+            <button class ="questionButton" id = "button1">button placeholder</button>
+        </div>
+        <div class="paragraph">
+            <button class ="questionButton" id = "button2">button placeholder</button>
+        </div>
+        <div class="paragraph">
+            <button class ="questionButton" id = "button3">button placeholder</button>
+        </div>
+        <div class="answerStatusBox" id = "rightWrong" style="display: none;">
+            <p class = "answerStatus" id = "check"></p>
         </div>
     </section>
-
-    <section id = "endGame" style="display: none;">
-        <h1 class = "title">All Done!</h1>
-        <p id = "finalScore"></p>
-        <form action="#">
-            <label for="initials">Enter Initials: </label>
-            <input type="text" name="initials" id="initials" value="">
-            <input class="buttonStyle" type="submit" value="Submit">
-        </form>
+    <!-- end of game 'all done' screen, enter initials form, submit button -->
+    <section class = "gameEnd" id = "allDone" style="display: none;">
+        <h1 class = "redBox">All Done!</h1>
+        <div class = "formContainer">
+            <p id = "finalScore"></p>
+            <form id ="finalPar" action="#">
+                <label for="initials">Enter Initials: </label>
+                <input type="text" name="initials" size="6" id="initials" value="" required>
+                <input class="submitBtn" type="submit" value="Submit">
+            </form>
+        </div>
     </section>
     
     <script src="./assets/script.js"></script>
