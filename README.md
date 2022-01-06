@@ -15,20 +15,16 @@ I'm really happy with the flexboxes, hover effects, color scheme, button styling
 
 ## Usage  
 
--User needs to load page.<br>
--User needs to click "Start Quiz" button to start the quiz.<br>
--Question and multiple-choice button container will appear.<br>
--User will need to click on a specific button to select their answer.<br>
---Depending on question being right or wrong, box will appear telling user "right!" or "wrong!".<br>
--Next question will populate on the page, user will again select an answer.<br>
--User will be asked a total of 5 questions.<br>
--Once user has completed quiz, or timer runs out, a new box, "All Done!" will appear.<br>
---"All Done!" box will display user's final score, as well as a form where user will submit their initials.<br>
---User will type initials in form and click "submit" button.<br><br>
-(the following usage is not currently working)<br>
--Once submit button is clicked, page will load "Highscores" page.<br>
--User's most recent score/initial combination will be stored, along with any previous score/initial submissions.<br>
--If user selects "View Highscores" in corner, "Highscores" page will show any scores stored in the local storage.
+-Load page<br>
+-Press "Start Quiz" button<br>
+-Question and 4 answer choices will appear<br>
+-User selects one button, user will be told whether "right" or "wrong" choice<br>
+-User will be asked 5 different questions<br>
+-At end of quiz, user's score will be displayed<br>
+-User will enter their initials in a form to be saved in the local storage<br>
+-Highscores page will contain stored initials/scores<br>
+-"Clear Highscores" button on Highscores page will clear stored initials/scores<br>
+-"Go Back" button will return to Start Quiz page.
 
 ![gif of coding quiz in action](https://github.com/sabhanson/HW4-codeQuiz/blob/main/assets/CodingQuiz.gif)
 
