@@ -27,7 +27,12 @@ I'm really happy with the flexboxes, hover effects, color scheme, button styling
 -"Go Back" button will return to Start Quiz page.
 
 ![gif of coding quiz in action](https://github.com/sabhanson/HW4-codeQuiz/blob/main/assets/CodingQuiz.gif)
+GIF shows functionality. First shows quiz when the user selects correct answers, and has a score of 50 at the end. Then, goes to Highscores page. Then, shows quiz again when the user selects incorrect answers, has 9 seconds remaining on the last question, and receives a score of 0.
 
 ## Badges
 
 ![GitHub followers](https://img.shields.io/github/followers/sabhanson?style=social)
+
+## Credits
+
+Thank you to Isaac and Chrissie, who helped me resolve certain issues I was experiencing.
