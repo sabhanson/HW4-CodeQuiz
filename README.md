@@ -26,7 +26,7 @@ I'm really happy with the flexboxes, hover effects, color scheme, button styling
 -"Clear Highscores" button on Highscores page will clear stored initials/scores<br>
 -"Go Back" button will return to Start Quiz page.
 
-![gif of coding quiz in action](https://github.com/sabhanson/HW4-codeQuiz/blob/main/assets/CodingQuiz.gif)
+![gif of coding quiz in action](https://github.com/sabhanson/HW4-codeQuiz/blob/main/assets/CodingQuiz.gif)<br>
 GIF shows functionality. First shows quiz when the user selects correct answers, and has a score of 50 at the end. Then, goes to Highscores page. Then, shows quiz again when the user selects incorrect answers, has 9 seconds remaining on the last question, and receives a score of 0.
 
 ## Badges
