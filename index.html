@@ -17,7 +17,7 @@
         <p id ="timer" class="timer">Time: 60 sec</p>
     </nav>
     <!-- coding quiz main page, 'coding quiz' 'take this quiz paragraph' 'start quiz button' -->
-    <section id="codeQuiz" class="codeQuizCon">
+    <section id="codeQuizContainer" class="codeQuizCon">
         <h1 class="redBox">Coding Quiz</h1>
         <p class="paragraph">Try your luck on this super-difficult quiz. You'll be given 60 seconds to answer 5 questions. Keep in mind, wrong answers will penalize your time remaining by 10 seconds.</p>
         <div id="startBtn" class="button">
@@ -26,8 +26,8 @@
     </section>
     <!-- container that holds possible questions and answer combos, answerStatus shows up here too -->
     <section id="questionContainer" class="questionBox" style="display: none;">
-        <h1 id="question" class="redBox">Question Placeholder</h1>
-        <div class="paragraph glow">
+        <h1 id="questionText" class="redBox">Question Placeholder</h1>
+        <div class="paragraph">
             <button class ="questionButton" id = "button0">button placeholder</button>
         </div>
         <div class="paragraph">
@@ -40,7 +40,7 @@
             <button class ="questionButton" id = "button3">button placeholder</button>
         </div>
         <div class="answerStatusBox" id = "rightWrong" style="display: none;">
-            <p class = "answerStatus" id = "check"></p>
+            <p class = "answerStatus" id = "answerStat"></p>
         </div>
     </section>
     <!-- end of game 'all done' screen, enter initials form, submit button -->
@@ -48,9 +48,9 @@
         <h1 class = "redBox">All Done!</h1>
         <div class = "formContainer">
             <p id = "finalScore"></p>
-            <form id ="finalPar" action="#">
+            <form id ="finalPar">
                 <label for="initials">Enter Initials: </label>
-                <input type="text" name="initials" size="6" id="initials" value="" required>
+                <input type="text" size="6" name="name" id="initials" placeholder="ex. JEM" value="" required>
                 <input class="submitBtn" type="submit" value="Submit">
             </form>
         </div>

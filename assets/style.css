@@ -146,6 +146,7 @@ body {
     padding: 10px;
     border: 5px double sandybrown;
     border-radius: 10px;
+    opacity: 70%;
 }
     
 .answerStatus {
