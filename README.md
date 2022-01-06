@@ -13,7 +13,7 @@ My skills in HTML and CSS were definitely improved with this project. I had a mu
 I'm really happy with the flexboxes, hover effects, color scheme, button styling, etc. I know I need to study JavaScript units to gain a better understanding of localStorage, functions, etc. as I was not able to get my quiz functioning as intended. I plan to start over on my JavaScript file once my knowledge of its usage improves.
 
 
-## Usage 
+## Usage  
 
 -User needs to load page.
 -Then, user needs to click "Start Quiz" button to start the quiz.
