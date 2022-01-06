@@ -15,7 +15,7 @@ I'm really happy with the flexboxes, hover effects, color scheme, button styling
 
 ## Usage  
 
--User needs to load page.
+-User needs to load page.<br>
 -Then, user needs to click "Start Quiz" button to start the quiz.
 -Then, a question and multiple-choice button container will appear. User will need to click on a specific button to select their answer. Depending on question being right or wrong, box will appear telling user "right!" or "wrong!". Next question will populate on the page, user will again select an answer. User will be asked a total of 5 questions. Once user has completed quiz, or timer runs out, a new box, "All Done!" will appear. "All Done!" box will display user's final score, as well as a form where user will submit their initials. User will type initials in form and click "submit" button. (the following usage is not currently working)... Once submit button is clicked, page will load "Highscores" page. User's most recent score/initial combination will be stored, along with any previous score/initial submissions. If user selects "View Highscores" in corner, "Highscores" page will show any scores stored in the local storage.
 
